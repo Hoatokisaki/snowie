@@ -13,7 +13,9 @@
             --text-sec: #b0b0b0;
             --green: #00e676;
             --red: #ff1744;
-            --bs-color: #3d5afe; /* Màu riêng cho Bluestacks */
+            --bs-color: #3d5afe;
+            --discord: #5865F2;
+            --youtube: #FF0000;
         }
 
         body {
@@ -24,9 +26,10 @@
             padding: 0;
         }
 
+        /* --- HEADER & BUTTONS --- */
         header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 50px 20px 30px; /* Giảm padding dưới để gần nút hơn */
             background: linear-gradient(180deg, rgba(92,107,192,0.2) 0%, rgba(15,15,19,0) 100%);
         }
 
@@ -40,8 +43,45 @@
         p.subtitle {
             color: var(--text-sec);
             margin-top: 10px;
+            margin-bottom: 25px;
         }
 
+        /* Style cho nhóm nút trên đầu trang */
+        .header-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; /* Tự xuống dòng trên điện thoại */
+        }
+
+        .btn-action {
+            padding: 10px 25px;
+            border-radius: 50px; /* Bo tròn kiểu viên thuốc */
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-discord {
+            background-color: var(--discord);
+        }
+
+        .btn-video {
+            background-color: var(--youtube);
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            filter: brightness(1.1);
+        }
+
+        /* --- CONTAINER & CARDS --- */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -67,10 +107,9 @@
                 border-color: var(--primary);
             }
 
-            /* Hiệu ứng hover riêng cho card BS */
             .card.bs-card:hover {
                 border-color: var(--bs-color);
-                box-shadow: 0 0 15px rgba(61, 90, 254, 0.3);
+                box-shadow: 0 0 15px rgba(61, 90, 254, 0.2);
             }
 
         .status {
@@ -140,7 +179,6 @@
                 background-color: #3949ab;
             }
 
-        /* Nút riêng cho BS */
         .btn-bs {
             background-color: var(--bs-color);
         }
@@ -154,6 +192,8 @@
             padding: 40px;
             color: var(--text-sec);
             font-size: 0.8rem;
+            border-top: 1px solid #333;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -161,7 +201,17 @@
 
     <header>
         <h1>NCH X LĐK</h1>
-        <p class="subtitle">Chuyên cung cấp các giải pháp bypass</p>
+        <p class="subtitle">Chuyên cung cấp các giải pháp tối ưu game tốt nhất</p>
+
+        <div class="header-actions">
+            <a href="https://t.me/sharepanel" class="btn-action btn-discord" target="_blank">
+                💬 Join telegram Community
+            </a>
+
+            <a href="https://youtube.com/watch?v=LINK_VIDEO_CUA_BAN" class="btn-action btn-video" target="_blank">
+                ▶️ Xem Video Hướng Dẫn
+            </a>
+        </div>
     </header>
 
     <div class="container">
@@ -169,7 +219,7 @@
             <div>
                 <span class="status safe">● WORKING / AN TOÀN</span>
                 <h2>Panel Version 1.0</h2>
-                <p>Phiên bản miễn phí hỗ trợ tối ưu FPS, giảm lag cơ bản. Thích hợp cho máy cấu hình yếu.</p>
+                <p>Phiên bản miễn phí hỗ trợ tối ưu FPS, giảm lag cơ bản.</p>
                 <ul>
                     <li>✅ Tối ưu RAM</li>
                     <li>✅ Fix Lag cơ bản</li>
@@ -195,13 +245,13 @@
             <div>
                 <span class="status bs">● OPTIMIZED / TỐI ƯU</span>
                 <h2>BlueStacks & Free Fire</h2>
-                <p>Gói giả lập BS5 kèm Free Fire đã được tinh chỉnh cài đặt sẵn.</p>
+                <p>Gói giả lập BS5 Lite kèm Free Fire x86 đã được tinh chỉnh.</p>
                 <ul>
-                    <li>✅ Free Fire hỗ trợ bypass</li>
-                    <li>✅ Keymapping chuẩn</li>
+                    <li>✅ bulestacks </li>
+                    <li>✅ Free Fire hỗ trợ nhiều hack</li>
                 </ul>
             </div>
-            <a href="https://download944.mediafire.com/ifodzd8iddggSgIl1n2BPJ9n-5Wbc27171Mz2zX--ah25FN_X4ie_Evsv6f6U0bjaCoGSU5VjPA5IVQrNgKreQVGkQUnpygyYs8nRvN-Dg5jmprgN20-PTu_q5UrvsKRenIj3DXipnlxLqw2Y0qdHuk-dvogR7EMBna1P46kKB_R/7ukq5vcmjw6gbtd/blue+x+ff.rar" class="btn btn-bs">Tải Combo BS + FF</a>
+            <a href="LINK_BLUESTACKS_CUA_BAN" class="btn btn-bs">Tải Combo BS + FF</a>
         </div>
 
         <div class="card">
@@ -215,7 +265,7 @@
     </div>
 
     <div class="footer">
-        &copy; 2026 My Panel Store. Join Discord để được hỗ trợ.
+        &copy; 2026 My Panel Store.
     </div>
 
 </body>
