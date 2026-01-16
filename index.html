@@ -43,7 +43,7 @@
             flex-direction: column;
             overflow-x: hidden;
             position: relative;
-            user-select: none; /* Chống bôi đen */
+            user-select: none;
             -webkit-user-select: none;
         }
 
@@ -250,7 +250,7 @@
                 z-index: -2;
                 background: transparent;
                 border-radius: 18px;
-                filter: blur(10px); /* Độ nhòe sáng */
+                filter: blur(10px);
                 opacity: 0;
                 transition: opacity 0.4s ease;
             }
@@ -258,19 +258,16 @@
             /* Khi Hover: Hiện Full Loop RGB */
             .card:hover::after {
                 opacity: 1;
-                /* Gradient đầy đủ 1 vòng, lặp lại màu đỏ ở cuối để khớp nối */
                 background: conic-gradient(from var(--angle), #ff0000, #ff00de, #00dbde, #ff9900, #ff0000 );
                 animation: borderRotate 2s linear infinite;
             }
 
-        /* Animation xoay vòng */
         @keyframes borderRotate {
             to {
                 --angle: 360deg;
             }
         }
 
-        /* Nền đen bên trong để che phần giữa */
         .card-inner-bg {
             position: absolute;
             inset: 0;
@@ -431,7 +428,7 @@
             <div class="card-icon"><i class="fa-solid fa-shield-cat"></i></div>
             <h2>Bypass UID VIP</h2>
             <div class="card-desc">Giúp pc của bạn ghép trận với mobile, Anti-Ban .</div>
-            <a href="https://drive.usercontent.google.com/download?id=14sYKDwosx1bAGeaRukJq4ADbKrjx10hK&export=download&authuser=0">Tải Ngay</a>
+            <a href="https://drive.usercontent.google.com/download?id=14sYKDwosx1bAGeaRukJq4ADbKrjx10hK&export=download&authuser=0" class="btn-download" style="display:block; text-align:center;">Tải Ngay</a>
         </div>
 
         <div class="card">
@@ -456,26 +453,31 @@
             <span class="status-badge status-risk">Maintenance</span>
             <div class="card-icon" style="color:var(--risk)"><i class="fa-solid fa-triangle-exclamation"></i></div>
             <h2>Aim Assist Tool</h2>
-            <div class="card-desc">Tool hỗ trợ ghim tâm. Đang bảo trì server.</div>
+            <div class="card-desc">Tool hỗ trợ ghim tâm. Không an toàn.</div>
             <a href="https://drive.usercontent.google.com/download?id=1mpAu5D1prVl7hXcTpsTBLgRMTn5uVp7c&export=download&authuser=0" class="btn-download">RISK</a>
         </div>
     </main>
 
     <footer>&copy; 2026 NCH X LĐK Store.</footer>
 
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/696a243b7f4b8b197a48bb17/1jf39r2u1';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
     <script>
         document.onkeydown = function (e) {
-            if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74)) || (e.ctrlKey && e.keyCode == 85)) {
-                return false;
-            }
+        if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 67 || e.keyCode == 74)) || (e.ctrlKey && e.keyCode == 85)) {
+        return false;
+        }
         };
         document.addEventListener("contextmenu", function (e) { e.preventDefault(); }, false);
     </script>
 </body>
 </html>
-
-
-
-
-
-
